@@ -1,0 +1,223 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #000; /* Changed background to black */
+  color: #fff; /* Changed text color to white for better visibility */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-top: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin: 20px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container form label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #555;
+}
+
+.form-container form input,
+.form-container form button {
+  margin: 10px 0;
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.form-container form input {
+  background: #f9f9f9;
+}
+
+.form-container form button {
+  background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.form-container form button:hover {
+  background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(255,140,0,1) 100%);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+li {
+  padding: 10px;
+  background: #fff;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+li button {
+  background: #ff4757;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+li button:hover {
+  background: #e84118;
+}
+
+/* Home page styles */
+.home-container {
+  text-align: center;
+  padding: 100px 20px;
+  background: url('https://images.unsplash.com/photo-1598887142489-e68e1f601c9d') no-repeat center center/cover;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.home-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.home-container h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.home-description {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+}
+
+.home-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-link {
+  background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  color: white;
+  text-decoration: none;
+  padding: 15px 30px;
+  margin: 10px 0;
+  border-radius: 6px;
+  font-size: 1.5em;
+  transition: background 0.3s ease;
+}
+
+.home-link:hover {
+  background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(255,140,0,1) 100%);
+}
+
+/* Back button styles */
+.back-button {
+  background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1em;
+  margin-bottom: 20px;
+  transition: background 0.3s ease;
+}
+
+.back-button:hover {
+  background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(255,140,0,1) 100%);
+}
+
+/* Responsive design */
+@media (min-width: 600px) {
+  .form-container form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form-container form label,
+  .form-container form input {
+    width: 48%;
+  }
+
+  .form-container form button {
+    width: 100%;
+    max-width: 200px;
+    align-self: flex-end;
+  }
+}
+
+@media (min-width: 900px) {
+  .form-container {
+    max-width: 800px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    width: 100%;
+    max-width: 800px;
+  }
+}
